@@ -10,7 +10,9 @@
     "format:check": "prettier --check .",
     "checks": "npm run format:check && npm run lint:check",
     "checks:fix": "npm run format && npm run lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:unit": "vitest -c ./vitest.config.unit.ts",
+    "test:unit:ui": "vitest -c ./vitest.config.unit.ts --ui"
   },
   "dependencies": {
     "@prisma/client": "^4.11.0",
@@ -39,6 +41,8 @@
     "prisma": "^4.11.0",
     "ts-node": "10.9.1",
     "tsconfig-paths": "^4.1.1",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "vitest": "^0.32.0",
+    "vitest-mock-extended": "^1.1.3"
   }
 }
